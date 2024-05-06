@@ -31,4 +31,4 @@ jobs:
     needs:
       - build
     secrets:
-      dockerhub_token: ${{ secrets.NPM_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
