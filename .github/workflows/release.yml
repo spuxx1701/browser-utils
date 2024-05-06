@@ -25,7 +25,7 @@ jobs:
 
   build:
     name: Build artifact
-    uses: spuxx1701/ci-cd/.github/workflows/pnpm_run_unit_tests.yml@v3.0.0
+    uses: spuxx1701/ci-cd/.github/workflows/pnpm_build.yml@v3.0.0
     needs:
       - run_checks
       - run_unit_tests
