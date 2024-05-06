@@ -1,6 +1,6 @@
 {
   "name": "@spuxx/browser-utils",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.0",
   "license": "GNU General Public License",
   "type": "module",
   "main": "dist/index.js",
