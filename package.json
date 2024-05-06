@@ -35,7 +35,7 @@
     "package.json"
   ],
   "scripts": {
-    "start": "vite",
+    "start": "vite dev app",
     "build": "vite build",
     "test": "pnpm run test:unit",
     "test:unit": "vitest run --coverage --reporter=default --reporter=junit --outputFile='reports/junit/junit.xml'",

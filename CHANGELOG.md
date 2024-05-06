@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - `react.svg` is no longer part of the build output.
+- Fixed test app.
 
 ## [0.1.0] 2024-05-06
 
