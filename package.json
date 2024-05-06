@@ -21,10 +21,11 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "test": "npm run test:unit",
+    "test": "pnpm run test:unit",
     "test:unit": "vitest run --coverage --reporter=default --reporter=junit --outputFile='reports/junit/junit.xml'",
+    "check": "pnpm types && pnpm run lint && pnpm run prettier-check",
+    "types": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx",
-    "lint:report": "ESLINT_CODE_QUALITY_REPORT='reports/quality/eslint_report.json' eslint . --ext ts,tsx --format gitlab",
     "prettier-check": "prettier --check .",
     "format": "prettier --write ."
   },
