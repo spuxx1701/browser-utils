@@ -1,10 +1,12 @@
-name: staging
+name: quality_check
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
 
 jobs:
   install_deps:
