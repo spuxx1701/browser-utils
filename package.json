@@ -1,7 +1,23 @@
 {
   "name": "@spuxx/browser-utils",
   "version": "0.1.0",
+  "author": {
+    "name": "spuxx",
+    "email": "hi@spuxx.dev",
+    "url": "https://spuxx.dev"
+  },
   "license": "GNU General Public License",
+  "keywords": [
+    "spuxx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spuxx1701/browser-utils"
+  },
+  "homepage": "https://github.com/spuxx1701/browser-utils/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/spuxx1701/browser-utils/issues"
+  },
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
