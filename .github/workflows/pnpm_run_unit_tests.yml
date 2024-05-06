@@ -1,0 +1,36 @@
+name: Install dependencies and cache
+
+on:
+  workflow_call:
+    inputs:
+      TEST_COMMAND_UNIT:
+        description: 'Command to run unit tests'
+        type: string
+        required: false
+        default: 'test:unit'
+
+jobs:
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Run unit tests
+        env:
+          TEST_COMMAND: ${{ inputs.TEST_COMMAND_UNIT }}
+        run: pnpm run $TEST_COMMAND
