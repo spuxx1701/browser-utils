@@ -9,7 +9,7 @@ export default defineConfig({
       all: true,
       include: ['lib/**/*.ts'],
       exclude: ['lib/index.ts', '**/*types.ts'],
-      reportsDirectory: 'reports/coverage',
+      reportsDirectory: 'reports/vitest/coverage',
       reporter: ['text', 'cobertura'],
     },
   },
