@@ -3,8 +3,8 @@ name: staging
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    tags:
+      - v*
 
 jobs:
   install_deps:
@@ -19,3 +19,16 @@ jobs:
     uses: spuxx1701/ci-cd/.github/workflows/pnpm_run_unit_tests.yml@v3.0.0
     needs:
       - install_deps
+
+  build:
+    uses: spuxx1701/ci-cd/.github/workflows/pnpm_run_unit_tests.yml@v3.0.0
+    needs:
+      - run_checks
+      - run_unit_tests
+
+  publish:
+    uses: spuxx1701/ci-cd/.github/workflows/pnpm_publish.yml@v3.0.0
+    needs:
+      - build
+    secrets:
+      dockerhub_token: ${{ secrets.NPM_TOKEN }}
