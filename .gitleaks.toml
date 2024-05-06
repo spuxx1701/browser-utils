@@ -1,0 +1,8 @@
+# GitLeaks tends to find false positives in node_modules (e.g. TypeScript)
+[allowlist]
+description = "global allow lists"
+regexes = [ ]
+paths = [
+    '''node_modules''',
+    '''.gitleaks.toml''',
+]
