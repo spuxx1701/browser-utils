@@ -7,14 +7,17 @@ on:
 
 jobs:
   install_deps:
+    name: Install dependencies
     uses: spuxx1701/ci-cd/.github/workflows/pnpm_install_deps.yml@v3.0.0
 
   run_checks:
+    name: Run code checks
     uses: spuxx1701/ci-cd/.github/workflows/pnpm_run_checks.yml@v3.0.0
     needs:
       - install_deps
 
   run_unit_tests:
+    name: Run unit tests
     uses: spuxx1701/ci-cd/.github/workflows/pnpm_run_unit_tests.yml@v3.0.0
     needs:
       - install_deps

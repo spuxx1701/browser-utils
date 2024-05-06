@@ -8,7 +8,7 @@ on:
 
 jobs:
   install_deps:
-    name: Install Dependencies
+    name: Install dependencies
     uses: spuxx1701/ci-cd/.github/workflows/pnpm_install_deps.yml@v3.0.0
 
   run_checks:
