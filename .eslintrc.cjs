@@ -4,7 +4,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['prettier', '@typescript-eslint', 'import'],
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
     // Miscellanous
     'no-console': ['error'],
@@ -39,16 +39,6 @@ module.exports = {
           regex: '^(__html|_html)$',
           match: true,
         },
-      },
-    ],
-    /**
-     * This prevents imports directly from the 'lib' folder. Instead,
-     * developers should import from 'dist'.
-     */
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: ['lib/*'],
       },
     ],
   },

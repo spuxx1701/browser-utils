@@ -4,6 +4,7 @@
 ![Quality checks](https://github.com/spuxx1701/browser-utils/actions/workflows/main.yml/badge.svg)
 ![Code coverage](https://img.shields.io/codecov/c/github/spuxx1701/browser-utils)
 ![Latest Release](https://img.shields.io/github/v/release/spuxx1701/browser-utils)
+![NPM Version](https://img.shields.io/npm/v/%40spuxx%2Fbrowser-utils)
 ![License](https://img.shields.io/github/license/spuxx1701/browser-utils)
 
 ### Description
