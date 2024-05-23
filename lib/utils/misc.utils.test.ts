@@ -64,4 +64,8 @@ describe('deepMerge', () => {
 
     expect(deepMerge(object1, object2)).toEqual(expected);
   });
+
+  test('should return an empty object if sources are empty', () => {
+    expect(deepMerge()).toEqual({});
+  });
 });
