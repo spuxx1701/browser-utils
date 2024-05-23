@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { isEmptyOrWhitespace, sleep } from './misc.utils';
+import { deepMerge, isEmptyOrWhitespace, sleep } from './misc.utils';
 
 describe('sleep', () => {
   test('should resolve after the given amount of milliseconds', async () => {
@@ -26,5 +26,42 @@ describe('isEmptyOrWhitespace', () => {
     expect(isEmptyOrWhitespace({})).toBe(false);
     expect(isEmptyOrWhitespace([])).toBe(false);
     expect(isEmptyOrWhitespace(false)).toBe(false);
+  });
+});
+
+describe('deepMerge', () => {
+  test('should merge objects deeply', () => {
+    const object1 = {
+      prop: {
+        foo: {
+          key1: '1',
+          key2: '2',
+        },
+      },
+    };
+
+    const object2 = {
+      prop: {
+        bar: {
+          key3: '3',
+          key4: '4',
+        },
+      },
+    };
+
+    const expected = {
+      prop: {
+        foo: {
+          key1: '1',
+          key2: '2',
+        },
+        bar: {
+          key3: '3',
+          key4: '4',
+        },
+      },
+    };
+
+    expect(deepMerge(object1, object2)).toEqual(expected);
   });
 });
